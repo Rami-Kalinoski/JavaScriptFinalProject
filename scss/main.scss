@@ -1,0 +1,186 @@
+// USES ------------------------------------------------------------------------------------------------------------------
+@use './partials/index.scss';
+@use './partials/tienda.scss';
+@use './partials/producto.scss';
+
+// RESET CSS -------------------------------------------------------------------------------------------------------------
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+// GENERAL STYLES --------------------------------------------------------------------------------------------------------
+body {
+    background-color: #222222;
+}
+
+p {
+    font-size: 2.25rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #ececec;
+}
+
+b {
+    font-size: 2.25rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: #ececec;
+}
+
+a {
+    font-size: 2.25rem;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: #ececec;
+}
+.link:hover {
+    text-decoration: underline solid 1.25px #e0dd9f;
+    color: #e0dd9f;
+}
+
+.title {
+    font-size: 4rem;
+    font-family: 'PT Serif', serif;
+    font-weight: 550;
+    text-decoration: underline solid 2px #ececec;
+    color: #ececec;
+}
+
+.subtitle {
+    font-size: 3rem;
+    font-family: 'PT Serif', serif;
+    font-weight: 550;
+    text-decoration: underline solid 2px #ececec;
+    color: #ececec;
+}
+
+.disclaimer {
+    font-size: 1.75rem;
+    font-family: 'Roboto Slab', serif;
+    color: #ececec;
+    margin: 5rem 20rem;
+    b {
+        font-size: 1.75rem;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 400;
+        text-decoration: underline solid 1px #ececec;
+        color: #ececec;
+    }
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+// HEADER ----------------------------------------------------------------------------------------------------------------
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1d1d;
+    padding: 7.5rem 20rem;
+    div {
+        display: flex;
+        gap: 10rem;
+        .headerTitle, .headerLogo {
+            height: 15rem;
+        }
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input {
+            font-size: 2.25rem;
+            font-family: 'Roboto Slab', serif;
+            color: #ececec;
+            background-color: #555555;
+            border: none;
+            border-radius: 25px;
+            padding: 1rem 2rem;
+            width: 50rem;
+        }
+    }
+}
+
+// FOOTER ----------------------------------------------------------------------------------------------------------------
+footer {
+    background-color: #1d1d1d;
+    margin-top: 10rem; // -----------------------------------------------
+    .footerTop {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 2px #121212;
+        padding: 10rem 20rem;
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 3rem;
+            h3 {
+                font-size: 2.25rem;
+                font-family: 'Roboto Slab', serif;
+                font-weight: 400;
+                color: #ececec;
+            }
+            .footerImg {
+                height: 3rem;
+            }
+            .footerMediosDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                div {
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
+            .footerRedesDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .footerContactoDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                h3 {
+                    margin-bottom: 1rem;
+                }
+                a, p {
+                    font-size: 1.75rem;
+                }
+            }
+            .footerFinalText {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 1rem;
+                p {
+                    font-size: 1.75rem;
+                    img {
+                        margin-right: 0.5rem;
+                        height: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+    .footerBottom {
+        padding: 5rem 50rem;
+        p {
+            font-size: 1.75rem;
+            text-align: center;
+        }
+    }
+}

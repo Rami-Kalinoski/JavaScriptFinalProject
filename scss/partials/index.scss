@@ -1,0 +1,84 @@
+// MAIN ------------------------------------------------------------------------------------------------------------------
+.index_main {
+    .title {
+        margin: 5rem 20rem;
+    }
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 20rem;
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                margin-bottom: 2.5rem;
+                height: 50rem;
+                width: 35rem;
+                object-fit: cover;
+                border: solid 2px #121212;
+            }
+            p {
+                padding: 0rem 5rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+            .precio {
+                margin-top: 2rem;
+            }
+        }
+    }
+    .tienda_button_div {
+        margin: 0rem 20rem 10rem 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            margin-top: 10rem;
+            padding: 1rem 2rem;
+            font-size: 2.25rem;
+            font-family: 'Roboto Slab', serif;
+            text-decoration: none;
+            color: #ececec;
+            background-color: #1d1d1d;
+            border: solid 2px #000000;
+            border-radius: 20px;
+        }
+    }
+}
+// NO MAIN SECTION -------------------------------------------------------------------------------------------------------
+.index_nomain {
+    margin: 10rem 20rem 10rem 20rem;
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        h2 {
+            margin-bottom: 2.5rem;
+        }
+        iframe {
+            height: 35rem;
+            width: 70rem;
+        }
+        .redes_div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 2.5rem;
+            div {
+                display: flex;
+                justify-content: start;
+                gap: 2rem;
+                height: 2.25rem;
+                .red_img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .lastArt {
+        margin-top: 15rem;
+    }
+}

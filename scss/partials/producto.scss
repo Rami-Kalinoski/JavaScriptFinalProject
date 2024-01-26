@@ -1,0 +1,256 @@
+// MAIN ------------------------------------------------------------------------------------------------------------------
+.producto_main {
+    margin: 10rem 35rem;
+    .producto_top_section {
+        height: 75rem;
+        display: flex;
+        .imgsArt {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: start;
+            div {
+                height: 100%;
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                gap: 2.5rem;
+                margin-right: 2.5rem;
+                .side_img {
+                    height: 3fr;
+                    width: 100%;
+                    object-fit: cover;
+                    border: solid 2px #121212;
+                }
+            }
+            .main_img {
+                    height: 100%;
+                    width: 70%;
+                    object-fit: cover;
+                    border: solid 2px #121212;
+            }
+        }
+        .infoArt {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .info_top {
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1 {
+                    font-size: 4rem;
+                    font-family: 'PT Serif', serif;
+                    font-weight: 550;
+                    text-align: center;
+                    color: #ececec;
+                    margin-bottom: 1rem;
+                }
+                h2 {
+                    font-size: 3rem;
+                    font-family: 'PT Serif', serif;
+                    font-weight: 550;
+                    text-align: center;
+                    color: #ececec;
+                    margin-bottom: 2rem;
+                }
+                p {
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-bottom: 5rem;
+                }
+            }
+            .info_bottom {
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .cant_div {
+                    width: 100%;
+                    padding-bottom: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h3 {
+                        font-size: 2.5rem;
+                        font-family: 'Roboto Slab', serif;
+                        font-weight: 300;
+                        color: #ececec;
+                        padding-bottom: 2rem;
+                    }
+                    .cant {
+                        height: 4rem;
+                        width: 50%;
+                        background-color: #303030;
+                        border-radius: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        span {
+                            width: 100%;
+                            text-align: center;
+                            font-size: 2.5rem;
+                            font-family: 'Roboto Slab', serif;
+                            font-weight: 300;
+                            color: #ececec;
+                            cursor: pointer;
+                        }
+                        .num {
+                            font-size: 2rem;
+                            border-right: solid 2px rgba(255, 255, 255, 0.2);
+                            border-left: solid 2px rgba(255, 255, 255, 0.2);
+                            pointer-events: none;
+                        }
+                    }
+                }
+                .size_div {
+                    width: 100%;
+                    padding-bottom: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h3 {
+                        font-size: 2.5rem;
+                        font-family: 'Roboto Slab', serif;
+                        font-weight: 300;
+                        color: #ececec;
+                        padding-bottom: 2rem;
+                    }
+                    div {
+                        width: 65%;
+                        display: flex;
+                        justify-content: space-between;
+                        .size_radio {
+                            display: none;
+                        }
+                        .size_label {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 1rem;
+                            height: 3rem;
+                            width: 3rem;
+                            border-radius: 100%;
+                            background-color: #303030;
+                            font-size: 1.75rem;
+                            font-family: 'Roboto Slab', serif;
+                            font-weight: 500;
+                            color: #ececec;
+                            cursor: pointer;
+                        }
+                        .size_label:hover {
+                            background-color: #101010;
+                        }
+                        .size_radio:checked + .size_label {
+                            color: #121212;
+                            font-weight: bolder;
+                            background-color: #e0dd9f;
+                        }
+                    }
+                }
+                .color_div {
+                    width: 100%;
+                    padding-bottom: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h3 {
+                        font-size: 2.5rem;
+                        font-family: 'Roboto Slab', serif;
+                        font-weight: 300;
+                        color: #ececec;
+                        padding-bottom: 2rem;
+                    }
+                    div {
+                        width: 50%;
+                        display: flex;
+                        justify-content: space-between;
+                        .color_radio {
+                            display: none;
+                        }
+                        .color_label {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 1rem;
+                            height: 3rem;
+                            width: 3rem;
+                            border-radius: 100%;
+                            font-size: 1.75rem;
+                            font-family: 'Roboto Slab', serif;
+                            font-weight: 500;
+                            color: #ececec;
+                            cursor: pointer;
+                        }
+                        .negro_label {
+                            background-color: #121212;
+                            &:hover {
+                                background-color: #000000;
+                            }
+                        }
+                        .gris_label {
+                            background-color: #555555;
+                            &:hover {
+                                background-color: #333333;
+                            }
+                        }
+                        .blanco_label {
+                            background-color: #ececec;
+                            &:hover {
+                                background-color: #aaaaaa;
+                            }
+                        }
+                        .azul_label {
+                            background-color: #205bb4;
+                            &:hover {
+                                background-color: #193e75;
+                            }
+                        }
+                        .color_radio:checked + .color_label::after {
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            content: "\f00c";
+                            font-size: 20px;
+                            color: #ececec;
+                        }
+                        .color_radio:checked + .blanco_label::after {
+                            color: #555555;
+                        }
+                    }
+                }
+            }
+            .addcart_button_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #addcart_button {
+                    padding: 1.5rem;
+                    width: 50%;
+                    background-color: #e0dd9f;
+                    border: none;
+                    border-radius: 15px;
+                    font-size: 1.75rem;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: 800;
+                    color: #121212;
+                    cursor: pointer;
+                }
+                #addcart_button:hover {
+                    background-color: #bfbd91;
+                }
+            }
+        }
+    }
+    .producto_bottom_section {
+        margin-top: 15rem;
+        p {
+            margin-top: 3rem;
+            text-align: justify;
+        }
+    }
+}

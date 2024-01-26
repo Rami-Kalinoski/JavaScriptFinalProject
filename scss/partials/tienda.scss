@@ -1,0 +1,110 @@
+// MAIN ------------------------------------------------------------------------------------------------------------------
+.tienda_main {
+    padding: 10rem 20rem 10rem 20rem;
+    display: flex;
+    // justify-content: space-between;
+    gap: 10rem;
+    .filters_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        .filters_subtitle {
+            font-size: 2.5rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 550;
+            text-decoration: none;
+            color: #ececec;
+        }
+        article {
+            padding: 5rem 0rem 5rem 3.5rem;
+            height: 52.5rem;
+            width: 25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            background-color: #1d1d1d;
+            border-radius: 25px;
+            .colors_div, .sizes_div {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                align-items: start;
+                span {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 1.5rem;
+                }
+                .checkbox_label {
+                    font-size: 1.75rem;
+                    font-family: 'Roboto Slab', serif;
+                    color: #ececec;
+                    cursor: pointer;
+                }
+                .checkbox {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 10px;
+                    background-color: #555555;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    outline: none;
+                }
+                .checkbox::after{
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f00c";
+                    font-size: 20px;
+                    color: #121212;
+                    display: none;
+                }
+                .checkbox:hover {
+                    background-color: #303030;
+                }
+                .checkbox:checked {
+                    background-color: #e0dd9f;
+                }
+                .checkbox:checked::after {
+                    display: block;
+                }
+            }
+        }
+    }
+    .shop_section {
+        padding-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 4rem 0rem;
+            img {
+                margin-bottom: 2.5rem;
+                height: 45rem;
+                width: 30rem;
+                object-fit: cover;
+                border: solid 2px #121212;
+                cursor: pointer;
+            }
+            h2, h3 {
+                padding: 0rem 5rem;
+                font-size: 2rem;
+                font-family: 'Roboto Slab', serif;
+                font-weight: 300;
+                text-align: center;
+                color: #ececec;
+            }
+        }
+    }
+}
