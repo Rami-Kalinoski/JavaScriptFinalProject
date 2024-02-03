@@ -116,25 +116,25 @@
   background-color: #1d1d1d;
   border-radius: 25px;
 }
-.tienda_main .filters_section article .colors_div, .tienda_main .filters_section article .sizes_div {
+.tienda_main .filters_section article .colors_div {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   align-items: start;
 }
-.tienda_main .filters_section article .colors_div span, .tienda_main .filters_section article .sizes_div span {
+.tienda_main .filters_section article .colors_div span {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 1.5rem;
 }
-.tienda_main .filters_section article .colors_div .checkbox_label, .tienda_main .filters_section article .sizes_div .checkbox_label {
+.tienda_main .filters_section article .colors_div .checkbox_label {
   font-size: 1.75rem;
   font-family: "Roboto Slab", serif;
   color: #ececec;
   cursor: pointer;
 }
-.tienda_main .filters_section article .colors_div .checkbox, .tienda_main .filters_section article .sizes_div .checkbox {
+.tienda_main .filters_section article .colors_div .checkbox {
   appearance: none;
   -webkit-appearance: none;
   height: 25px;
@@ -147,7 +147,7 @@
   align-items: center;
   outline: none;
 }
-.tienda_main .filters_section article .colors_div .checkbox::after, .tienda_main .filters_section article .sizes_div .checkbox::after {
+.tienda_main .filters_section article .colors_div .checkbox::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f00c";
@@ -155,13 +155,13 @@
   color: #121212;
   display: none;
 }
-.tienda_main .filters_section article .colors_div .checkbox:hover, .tienda_main .filters_section article .sizes_div .checkbox:hover {
+.tienda_main .filters_section article .colors_div .checkbox:hover {
   background-color: #303030;
 }
-.tienda_main .filters_section article .colors_div .checkbox:checked, .tienda_main .filters_section article .sizes_div .checkbox:checked {
+.tienda_main .filters_section article .colors_div .checkbox:checked {
   background-color: #e0dd9f;
 }
-.tienda_main .filters_section article .colors_div .checkbox:checked::after, .tienda_main .filters_section article .sizes_div .checkbox:checked::after {
+.tienda_main .filters_section article .colors_div .checkbox:checked::after {
   display: block;
 }
 .tienda_main .shop_section {
@@ -731,9 +731,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 10rem;
+  gap: 5rem;
   align-items: center;
-  padding: 10rem 5rem;
+  padding: 5rem 5rem;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
 }
 .comprar_container .titulo {
@@ -744,7 +744,7 @@ a {
   color: #ececec;
 }
 .comprar_container form {
-  height: 60%;
+  height: 80%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -803,11 +803,12 @@ a {
 .finalmsg_container {
   opacity: 0;
   visibility: hidden;
+  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 30rem;
+  height: 40rem;
   width: 50rem;
   background-color: #121212;
   border-radius: 25px;
@@ -815,7 +816,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10rem 10rem;
+  padding: 5rem 10rem;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
 }
 .finalmsg_container .titulo {
@@ -833,10 +834,39 @@ a {
   color: #ececec;
   text-align: center;
 }
+.finalmsg_container .fin_button {
+  padding: 1rem 2rem;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  color: #ececec;
+  background-color: #1d1d1d;
+  border: solid 2px #000000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.finalmsg_container .fin_button:hover {
+  color: #1d1d1d;
+  font-weight: 900;
+  background-color: #e0dd9f;
+  border: solid 2px #898760;
+}
 
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+.added_notification {
+  padding: 1rem 2rem;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  color: #1d1d1d;
+  font-weight: 900;
+  border: solid 2px #e0dd9f;
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: default;
 }
 
 header {

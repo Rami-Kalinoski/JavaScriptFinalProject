@@ -39,6 +39,56 @@ export const darVidaATienda = () => {
         })
     })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const funcionDeFiltros = () => {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const seleccionarProducto = () => {
     const productArts = [art111, art112, art211, art212, art311, art312, art413, art513, art621];
     let articuloChilds;
@@ -196,9 +246,6 @@ export const addToCartInStorage = () => {
     // agregar el nuevo <li> al <ul>
     const ul = document.querySelector(".productosSeleccionados ul");
     ul.appendChild(newLi);
-
-    const carritoSize = document.querySelector("#cart_lenght");
-    carritoSize.innerText = cart.length;
 }
 export const removeFromCartInStorage = (li) => {
     // recuperar el carrito desde el storage

@@ -67,15 +67,52 @@ buycart.addEventListener("click", () => {
 })
 
 const finalgraciasContainer = document.querySelector(".finalmsg_container");
-const purchasecart = document.querySelector("#purchase_button");
 const cancelpurchase = document.querySelector("#cancel_button");
-purchasecart.addEventListener("click", (event) => {
+const formulario = document.querySelector("#comprar_form");
+formulario.addEventListener("submit", (event) => {
     event.preventDefault()
-    vaciarCarritoInStorage();
+
+    // CAPTURAR DATOS DEL CLIENTE
+    const fname = document.querySelector("#nombreCliente_input").value;
+    const lname = document.querySelector("#apellidoCliente_input").value;
+    const email = document.querySelector("#emailCliente_input").value;
+    const phone = document.querySelector("#phoneCliente_input").value;
+
+    // CREAR INFORMACIÓN DE CLIENTE EN EL CUERPO DEL EMAIL
+    let clienteHTML = `<b>Nombre del Cliente:</b> ${lname} ${fname}<br><b>Email del Cliente:</b> ${email}<br><b>Teléfono del Cliente:</b> ${phone}<br><br><br><b>Orden de Compra:</b><br><br>`;
+
+    // CREAR INFORMACIÓN DE COMPRA EN EL CUERPO DEL EMAIL
+    const carritoAux = JSON.parse(localStorage.getItem("carrito"));
+    let precioFinal = 0;
+    let contentHTML = `<ul>`;
+    carritoAux.forEach((elemento) => {
+        contentHTML += `<li>Nombre: ${elemento.name}<br>Cantidad: ${elemento.cant}<br>Talle: ${elemento.size}<br>Color: ${elemento.color}<br>Precio: $${elemento.price}</li>`;
+        precioFinal += parseFloat(elemento.price);
+    })
+    contentHTML += `<br><br><b>Precio Final:</b> $${precioFinal}`;
+    contentHTML += `</ul>`;
+
+    const cuerpoEmail = clienteHTML + contentHTML;
+    alert(cuerpoEmail)
+
+    Email.send({
+        SecureToken : "608bc5f7-4fd4-4731-b414-e12a7eb3e1f8",
+        To : "ramikalinoski@gmail.com",
+        From : "valeriamelisaromero@gmail.com",
+        Subject : "Nueva Orden de Compra",
+        Body : cuerpoEmail
+        }).then(
+        message => alert(message)
+    );
+
     finalgraciasContainer.classList.add("visible");
     buyContainer.classList.remove("visible");
+    const timeId = setTimeout(()=>{
+        vaciarCarritoInStorage();
+    }, 5000)
     return false;
 })
+
 cancelpurchase.addEventListener("click", () => {
     carrito.classList.add("visible");
     buyContainer.classList.remove("visible");
@@ -83,4 +120,13 @@ cancelpurchase.addEventListener("click", () => {
 
 // AGREGAR AL CARRITO ----------------------------------------------------------------------
 const addcart = document.querySelector("#addcart_button");
-addcart.addEventListener("click", () => {addToCartInStorage()});
+addcart.addEventListener("click", () => {
+    addToCartInStorage();
+    Toastify({
+        text: "Agregado al carrito ;)",
+        duration: 5000,
+        gravity: "bottom",
+        className: "added_notification",
+        backgroundColor: "#e9e6b4"
+    }).showToast();
+});

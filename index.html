@@ -58,11 +58,13 @@
     <!-- COMPRAR CARRITO -------------------------------------------------------------- -->
     <div class="comprar_container">
         <p class="titulo">Comprar en Phanterz</p>
-        <form action="">
+        <form action="" id="comprar_form">
             <input type="text" name="nombreCliente" id="nombreCliente_input" placeholder="Ingrese su nombre" class="comprar_input" required>
+            <input type="text" name="apellidoCliente" id="apellidoCliente_input" placeholder="Ingrese su apellido" class="comprar_input" required>
             <input type="email" name="emailCliente" id="emailCliente_input" placeholder="Ingrese su email" class="comprar_input" required>
+            <input type="text" name="phoneCliente" id="phoneCliente_input" placeholder="Ingrese su teléfono" class="comprar_input" required>
             <div>
-                <button type="button" class="pagar_button" id="purchase_button">PAGAR</button>
+                <button type="submit" class="pagar_button" id="purchase_button">PAGAR</button>
                 <button class="cancelar_button" id="cancel_button">CANCELAR</button>
             </div>
         </form>
@@ -156,6 +158,8 @@
             <p>Este sitio web es un proyecto de curso. La tienda no es real, solicitamos precaución con este mensaje para no generar problemas, muchas gracias.</p>
         </section>
     </footer>
+    <!-- EMAIL API -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- JAVASCRIPT -->
     <script src="./js/index.js" type="module"></script>
     <script src="./js/carrito.js" type="module"></script>

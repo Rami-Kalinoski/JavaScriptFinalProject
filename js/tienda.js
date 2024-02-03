@@ -1,5 +1,5 @@
 // IMPORTACIONES --------------------------------------------------------------------------------
-import {cargarTienda, darVidaATienda, seleccionarProducto} from "./src/functions.js";
+import {cargarTienda, darVidaATienda, funcionDeFiltros, seleccionarProducto} from "./src/functions.js";
 
 // PROGRAMA PRINCIPAL ---------------------------------------------------------------------------
 window.addEventListener('beforeunload', () => {
@@ -8,4 +8,5 @@ window.addEventListener('beforeunload', () => {
 
 cargarTienda();
 darVidaATienda();
+funcionDeFiltros();
 seleccionarProducto();
