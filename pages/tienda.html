@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/img/branding/pzlogo.png" type="image/x-icon">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +27,34 @@
         </nav>
     </header>
     <!-- CUERPO-------------------------------------------------------------------------------------------------------------------- -->
+    <!-- CARRITO ---------------------------------------------------------------------- -->
+    <div class="first_panel">
+        <p class="disclaimer"><b>Atención:</b> este sitio web es un proyecto de curso.</p>
+        <button id="openCarrito_button" class="carrito_button">
+            <p id="cart_lenght">0</p>
+            <img src="../assets/logo/carrito.png" alt="Carrito">
+        </button>
+    </div>
+    <div id="carrito" class="carrito">
+        <div class="carrito_header">
+            <p>Carrito</p>
+            <img src="../assets/logo/cruz.png" alt="Cerrar" id="closeCarrito_button">
+        </div>
+        <div class="productosSeleccionados">
+            <ul>
+                <!-- <li>
+                </li> -->
+            </ul>
+            <button class="vaciarCarrito_button" id="emptycart_button">VACIAR CARRITO</button>
+        </div>
+        <div class="precioFinal">
+            <span>
+                <p>Total</p>
+                <p id="total_num">$ 0.00</p>
+            </span>
+        </div>
+    </div>
+    <!-- MAIN ------------------------------------------------------------------------- -->
     <main class="tienda_main">
         <!-- FILTROS------------------------------------------------------------------ -->
         <section class="filters_section">
@@ -79,47 +109,47 @@
         <!-- PRODUCTOS---------------------------------------------------------------- -->
         <section class="shop_section">
             <article id="shop_111art">
-                <img src="../assets/img/products/111/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/111/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/111/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_112art">
-                <img src="../assets/img/products/112/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/112/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/112/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_211art">
-                <img src="../assets/img/products/211/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/211/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/211/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_212art">
-                <img src="../assets/img/products/212/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/212/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/212/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_311art">
-                <img src="../assets/img/products/311/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/311/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/311/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_312art">
-                <img src="../assets/img/products/312/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/312/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/312/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_413art">
-                <img src="../assets/img/products/413/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/413/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/413/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_513art">
-                <img src="../assets/img/products/513/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/513/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/513/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
             <article id="shop_621art">
-                <img src="../assets/img/products/621/modelfront.jpg" alt="" class="product_img_shop" data-backup-src="../assets/img/products/621/modelback.jpg">
+                <a href="./producto.html"><img src="../assets/img/products/621/modelfront.jpg" alt="" class="product_img_shop"></a>
                 <!-- <h2>NOMBRE</h2> -->
                 <!-- <h3>PRECIO</h3> -->
             </article>
@@ -150,7 +180,6 @@
                 <div class="footerContactoDiv">
                     <h3>CONTACTO</h3>
                     <p>phanterz.ar@gmail.com</p>
-                    <a href="../pages/contacto.html">Ir a pestaña de contacto</a>
                 </div>
                 <div class="footerFinalText">
                     <p><img src="../assets/logo/pointer.png" alt="Locación" class="locationImg">Argentina</p>
@@ -163,10 +192,7 @@
         </section>
     </footer>
     <!-- JAVASCRIPT -->
-    <script src="../js/main.js" type="module"></script>
-    <script src="../js/functions.js" type="module"></script>
-    <script src="../js/vars.js" type="module"></script>
-    <script src="../js/pages.js" type="modlue"></script>
-    <script src="../js/database.js" type="module"></script>
+    <script src="../js/tienda.js" type="module"></script>
+    <script src="../js/carrito.js" type="module"></script>
 </body>
 </html>

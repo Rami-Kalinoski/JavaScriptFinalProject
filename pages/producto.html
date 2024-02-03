@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/img/branding/pzlogo.png" type="image/x-icon">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +27,34 @@
         </nav>
     </header>
     <!-- CUERPO-------------------------------------------------------------------------------------------------------------------- -->
+    <!-- CARRITO ---------------------------------------------------------------------- -->
+    <div class="first_panel">
+        <p class="disclaimer"><b>Atención:</b> este sitio web es un proyecto de curso.</p>
+        <button id="openCarrito_button" class="carrito_button">
+            <p id="cart_lenght">0</p>
+            <img src="../assets/logo/carrito.png" alt="Carrito">
+        </button>
+    </div>
+    <div id="carrito" class="carrito">
+        <div class="carrito_header">
+            <p>Carrito</p>
+            <img src="../assets/logo/cruz.png" alt="Cerrar" id="closeCarrito_button">
+        </div>
+        <div class="productosSeleccionados">
+            <ul>
+                <!-- <li>
+                </li> -->
+            </ul>
+            <button class="vaciarCarrito_button" id="emptycart_button">VACIAR CARRITO</button>
+        </div>
+        <div class="precioFinal">
+            <span>
+                <p>Total</p>
+                <p id="total_num">$ 0.00</p>
+            </span>
+        </div>
+    </div>
+    <!-- MAIN ------------------------------------------------------------------------- -->
     <main class="producto_main">
         <section class="producto_top_section">
             <article class="imgsArt">
@@ -53,30 +83,38 @@
                     <div class="size_div">
                         <h3>Seleccionar talle</h3>
                         <div>
-                            <input type="radio" name="product_size" id="xs" class="size_radio" checked>
+                            <input type="radio" name="product_size" value="xs" id="xs" class="size_radio" checked>
                             <label for="xs" class="size_label">XS</label>
-                            <input type="radio" name="product_size" id="s" class="size_radio">
+
+                            <input type="radio" name="product_size" value="s" id="s" class="size_radio">
                             <label for="s" class="size_label">S</label>
-                            <input type="radio" name="product_size" id="m" class="size_radio">
+
+                            <input type="radio" name="product_size" value="m" id="m" class="size_radio">
                             <label for="m" class="size_label">M</label>
-                            <input type="radio" name="product_size" id="l" class="size_radio">
+
+                            <input type="radio" name="product_size" value="l" id="l" class="size_radio">
                             <label for="l" class="size_label">L</label>
-                            <input type="radio" name="product_size" id="xl" class="size_radio">
+
+                            <input type="radio" name="product_size" value="xl" id="xl" class="size_radio">
                             <label for="xl" class="size_label">XL</label>
-                            <input type="radio" name="product_size" id="xxl" class="size_radio">
+
+                            <input type="radio" name="product_size" value="xxl" id="xxl" class="size_radio">
                             <label for="xxl" class="size_label">XXL</label>
                         </div>
                     </div>
                     <div class="color_div">
                         <h3>Seleccionar color</h3>
                         <div>
-                            <input type="radio" name="product_color" id="negro" class="color_radio" checked>
+                            <input type="radio" name="product_color" value="negro" id="negro" class="color_radio" checked>
                             <label for="negro" class="color_label negro_label"></label>
-                            <input type="radio" name="product_color" id="gris" class="color_radio">
+
+                            <input type="radio" name="product_color" value="gris" id="gris" class="color_radio">
                             <label for="gris" class="color_label gris_label"></label>
-                            <input type="radio" name="product_color" id="blanco" class="color_radio">
+
+                            <input type="radio" name="product_color" value="blanco" id="blanco" class="color_radio">
                             <label for="blanco" class="color_label blanco_label"></label>
-                            <input type="radio" name="product_color" id="azul" class="color_radio">
+
+                            <input type="radio" name="product_color" value="azul" id="azul" class="color_radio">
                             <label for="azul" class="color_label azul_label"></label>
                         </div>
                     </div>
@@ -117,7 +155,6 @@
                 <div class="footerContactoDiv">
                     <h3>CONTACTO</h3>
                     <p>phanterz.ar@gmail.com</p>
-                    <a href="../pages/contacto.html">Ir a pestaña de contacto</a>
                 </div>
                 <div class="footerFinalText">
                     <p><img src="../assets/logo/pointer.png" alt="Locación" class="locationImg">Argentina</p>
@@ -130,10 +167,7 @@
         </section>
     </footer>
     <!-- JAVASCRIPT -->
-    <script src="../js/main.js" type="module"></script>
-    <script src="../js/functions.js" type="module"></script>
-    <script src="../js/vars.js" type="module"></script>
-    <script src="../js/pages.js" type="modlue"></script>
-    <script src="../js/database.js" type="module"></script>
+    <script src="../js/producto.js" type="module"></script>
+    <script src="../js/carrito.js"  type="module"></script>
 </body>
 </html>

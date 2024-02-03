@@ -19,11 +19,13 @@
                 width: 35rem;
                 object-fit: cover;
                 border: solid 2px #121212;
+                cursor: pointer;
             }
             p {
                 padding: 0rem 5rem;
                 font-size: 2rem;
                 text-align: center;
+                cursor: pointer;
             }
             .precio {
                 margin-top: 2rem;
@@ -31,12 +33,11 @@
         }
     }
     .tienda_button_div {
-        margin: 0rem 20rem 10rem 20rem;
+        margin: 10rem 22rem 10rem 22rem;
         display: flex;
         justify-content: center;
         align-items: center;
         a {
-            margin-top: 10rem;
             padding: 1rem 2rem;
             font-size: 2.25rem;
             font-family: 'Roboto Slab', serif;
@@ -46,6 +47,12 @@
             border: solid 2px #000000;
             border-radius: 20px;
         }
+    }
+    .tienda_button_div a:hover {
+        color: #1d1d1d;
+        font-weight: 900;
+        background-color: #e0dd9f;
+        border: solid 2px #898760;
     }
 }
 // NO MAIN SECTION -------------------------------------------------------------------------------------------------------

@@ -18,6 +18,7 @@ html {
 // GENERAL STYLES --------------------------------------------------------------------------------------------------------
 body {
     background-color: #222222;
+    overflow: auto;
 }
 
 p {
@@ -61,22 +62,199 @@ a {
     color: #ececec;
 }
 
-.disclaimer {
-    font-size: 1.75rem;
-    font-family: 'Roboto Slab', serif;
-    color: #ececec;
-    margin: 5rem 20rem;
-    b {
+.cursor_pointer {
+    cursor: pointer;
+}
+
+// CARRITO ---------------------------------------------------------------------------------------------------------------
+.first_panel {
+    margin: 10rem 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .disclaimer {
         font-size: 1.75rem;
         font-family: 'Roboto Slab', serif;
-        font-weight: 400;
-        text-decoration: underline solid 1px #ececec;
         color: #ececec;
+        margin: 0;
+        b {
+            font-size: 1.75rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+            text-decoration: underline solid 1px #ececec;
+            color: #ececec;
+        }
+    }
+    .carrito_button {
+        padding: 1rem;
+        background: none;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        cursor: pointer;
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+    .carrito_button:hover {
+        background-color: #1d1d1d;
     }
 }
 
-.cursor_pointer {
-    cursor: pointer;
+.carrito {
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5rem;
+    background-color: #121212;
+    width: 35%;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .7);
+
+    .carrito_header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+        border-bottom: solid 2px #555555;
+        padding-bottom: 5rem;
+        p {
+            font-size: 4rem;
+            font-family: 'PT Serif', serif;
+            font-weight: 550;
+            text-decoration: underline solid 2px #ececec;
+            color: #ececec;
+        }
+        img {
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+        }
+    }
+    .productosSeleccionados {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+        padding: 2.5rem 0rem 3rem 0rem;
+        ul {
+            width: 100%;
+            li {
+                background-color: #1d1d1d;
+                border-radius: 25px;
+                padding: 2rem 0rem;
+                margin: 2.5rem 0rem;
+                height: 15rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                .leftLi_span {
+                    .carritoLi_img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border: solid 1.50px #1c1c1c;
+                        border-radius: 15px;
+                        }
+                }
+                .middleLi_span {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: end;
+                    gap: 2.5rem;
+                    .middleLi_name {
+                        font-size: 2rem;
+                        font-family: 'Roboto Slab', serif;
+                        font-weight: 300;
+                        color: #ececec;
+                        text-decoration: underline solid 1px #ececec;
+                    }
+                    div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: start;
+                        p {
+                            width: 100%;
+                            font-size: 1.8rem;
+                            display: flex;
+                            justify-content: space-between;
+                            span {
+                                font-size: 2rem;
+                                font-family: 'Roboto Slab', serif;
+                                font-weight: 300;
+                                color: #ececec;
+                            }
+                        }
+                    }
+                }
+                .rightLi_span {
+                    display: flex;
+                    align-items: end;
+                    gap: 2rem;
+                    img {
+                        height: 3rem;
+                        width: 3rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .vaciarCarrito_button {
+            margin-top: 2.5rem;
+            padding: 1rem 2rem;
+            font-size: 2.25rem;
+            font-family: 'Roboto Slab', serif;
+            text-decoration: none;
+            color: #ececec;
+            background-color: #1d1d1d;
+            border: solid 2px #000000;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .vaciarCarrito_button:hover {
+            color: #1d1d1d;
+            font-weight: 900;
+            background-color: #e0dd9f;
+            border: solid 2px #898760;
+        }
+    }
+    .precioFinal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        border-top: solid 2px #555555;
+        padding-top: 3.5rem;
+        span {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 // HEADER ----------------------------------------------------------------------------------------------------------------

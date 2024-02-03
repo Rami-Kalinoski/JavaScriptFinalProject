@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/img/branding/pzlogo.png" type="image/x-icon">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,29 +25,56 @@
         </nav>
     </header>
     <!-- CUERPO-------------------------------------------------------------------------------------------------------------------- -->
-    <p class="disclaimer"><b>Atención:</b> este sitio web es un proyecto de curso.</p>
+    <!-- CARRITO ---------------------------------------------------------------------- -->
+    <div class="first_panel">
+        <p class="disclaimer"><b>Atención:</b> este sitio web es un proyecto de curso.</p>
+        <button id="openCarrito_button" class="carrito_button">
+            <p id="cart_lenght">0</p>
+            <img src="./assets/logo/carrito.png" alt="Carrito">
+        </button>
+    </div>
+    <div id="carrito" class="carrito">
+        <div class="carrito_header">
+            <p>Carrito</p>
+            <img src="./assets/logo/cruz.png" alt="Cerrar" id="closeCarrito_button">
+        </div>
+        <div class="productosSeleccionados">
+            <ul>
+                <!-- <li>
+                </li> -->
+            </ul>
+            <button class="vaciarCarrito_button" id="emptycart_button">VACIAR CARRITO</button>
+        </div>
+        <div class="precioFinal">
+            <span>
+                <p>Total</p>
+                <p id="total_num">$ 0.00</p>
+            </span>
+        </div>
+    </div>
+    <!-- MAIN ------------------------------------------------------------------------- -->
     <main class="index_main">
-        <h1 class="title">Productos Destacados</h1>
+        <a href="./pages/tienda.html"><h1 class="title">Productos Destacados</h1></a>
         <section>
-            <article>
-                <img src="./assets/img/products/111/modelfront.jpg" alt="Modelo usando la remera oversize Phanterz Ind">
-                <p class="nombre">Remera Oversize<br>"Phanterz Ind"</p>
-                <p class="precio">$7.000</p>
+            <article id="index111art">
+                <a href="./pages/tienda.html"><img src="./assets/img/products/111/modelfront.jpg" alt="Modelo usando la remera oversize Phanterz Ind"></a>
+                <a href="./pages/tienda.html"><p class="nombre">Remera Oversize<br>"Phanterz Ind"</p></a>
+                <a href="./pages/tienda.html"><p class="precio">$7.000</p></a>
             </article>
-            <article>
-                <img src="./assets/img/products/212/modelfront.jpg" alt="Modelo usando la remera sin mangas Snake Venom">
-                <p class="nombre">Remera sin Mangas<br>“Snake Venom”</p>
-                <p class="precio">$7.500</p>
+            <article id="index212art">
+                <a href="./pages/tienda.html"><img src="./assets/img/products/212/modelfront.jpg" alt="Modelo usando la remera sin mangas Snake Venom"></a>
+                <a href="./pages/tienda.html"><p class="nombre">Remera sin Mangas<br>“Snake Venom”</p></a>
+                <a href="./pages/tienda.html"><p class="precio">$7.500</p></a>
             </article>
-            <article>
-                <img src="./assets/img/products/312/modelfront.jpg" alt="Modelo usando la remera sin mangas Phanterz Scar">
-                <p class="nombre">Remera sin Mangas<br>“Phanterz Scar”</p>
-                <p class="precio">$8.000</p>
+            <article id="index312art">
+                <a href="./pages/tienda.html"><img src="./assets/img/products/312/modelfront.jpg" alt="Modelo usando la remera sin mangas Phanterz Scar"></a>
+                <a href="./pages/tienda.html"><p class="nombre">Remera sin Mangas<br>“Phanterz Scar”</p></a>
+                <a href="./pages/tienda.html"><p class="precio">$8.000</p></a>
             </article>
-            <article>
-                <img src="./assets/img/products/413/modelfront.jpg" alt="Modelo usando la remera de compresión The Black Phanter">
-                <p class="nombre">Remera de Compresión<br>“The Black Phanter”</p>
-                <p class="precio">$12.000</p>
+            <article id="index413art">
+                <a href="./pages/tienda.html"><img src="./assets/img/products/413/modelfront.jpg" alt="Modelo usando la remera de compresión The Black Phanter"></a>
+                <a href="./pages/tienda.html"><p class="nombre">Remera de Compresión<br>“The Black Phanter”</p></a>
+                <a href="./pages/tienda.html"><p class="precio">$12.000</p></a>
             </article>
         </section>
         <div class="tienda_button_div">
@@ -85,10 +114,10 @@
                 <div class="footerRedesDiv">
                     <h3>REDES SOCIALES</h3>
                     <div>
-                        <img src="./assets/logo/instagram.png" alt="Logo de Instagram" class="footerImg">
-                        <img src="./assets/logo/tiktok.png" alt="Logo de Tik Tok" class="footerImg">
-                        <img src="./assets/logo/facebook.png" alt="Logo de Facebook" class="footerImg">
-                        <img src="./assets/logo/x.png" alt="Logo de X" class="footerImg">
+                        <a href="#">    <img src="./assets/logo/instagram.png" alt="Logo de Instagram" class="footerImg">   </a>
+                        <a href="#">    <img src="./assets/logo/tiktok.png" alt="Logo de Tik Tok" class="footerImg">        </a>
+                        <a href="#">    <img src="./assets/logo/facebook.png" alt="Logo de Facebook" class="footerImg">     </a>
+                        <a href="#">    <img src="./assets/logo/x.png" alt="Logo de X" class="footerImg">                   </a>
                     </div>
                 </div>
             </article>
@@ -96,7 +125,6 @@
                 <div class="footerContactoDiv">
                     <h3>CONTACTO</h3>
                     <p>phanterz.ar@gmail.com</p>
-                    <a href="./pages/contacto.html">Ir a pestaña de contacto</a>
                 </div>
                 <div class="footerFinalText">
                     <p><img src="./assets/logo/pointer.png" alt="Locación" class="locationImg">Argentina</p>
@@ -109,10 +137,7 @@
         </section>
     </footer>
     <!-- JAVASCRIPT -->
-    <script src="./js/main.js" type="module"></script>
-    <script src="./js/functions.js" type="module"></script>
-    <script src="./js/vars.js" type="module"></script>
-    <script src="./js/pages.js" type="modlue"></script>
-    <script src="./js/database.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/carrito.js" type="module"></script>
 </body>
 </html>
