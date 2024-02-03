@@ -58,6 +58,29 @@ cerrarCarrito.addEventListener("click", () => {carrito.classList.remove("visible
 const emptycart = document.querySelector("#emptycart_button");
 emptycart.addEventListener("click", () => {vaciarCarritoInStorage()});
 
+// COMPRAR CARRITO -------------------------------------------------------------------------
+const buycart = document.querySelector("#buy_button");
+const buyContainer = document.querySelector(".comprar_container");
+buycart.addEventListener("click", () => {
+    buyContainer.classList.add("visible");
+    carrito.classList.remove("visible");
+})
+
+const finalgraciasContainer = document.querySelector(".finalmsg_container");
+const purchasecart = document.querySelector("#purchase_button");
+const cancelpurchase = document.querySelector("#cancel_button");
+purchasecart.addEventListener("click", (event) => {
+    event.preventDefault()
+    vaciarCarritoInStorage();
+    finalgraciasContainer.classList.add("visible");
+    buyContainer.classList.remove("visible");
+    return false;
+})
+cancelpurchase.addEventListener("click", () => {
+    carrito.classList.add("visible");
+    buyContainer.classList.remove("visible");
+})
+
 // AGREGAR AL CARRITO ----------------------------------------------------------------------
 const addcart = document.querySelector("#addcart_button");
 addcart.addEventListener("click", () => {addToCartInStorage()});

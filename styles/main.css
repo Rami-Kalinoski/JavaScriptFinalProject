@@ -558,7 +558,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: end;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -687,13 +687,151 @@ a {
   align-items: center;
   gap: 2rem;
   border-top: solid 2px #555555;
+  border-bottom: solid 2px #555555;
   padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 .carrito .precioFinal span {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.carrito .comprar_div {
+  margin-top: 5rem;
+}
+.carrito .comprar_div .comprar_button {
+  padding: 1rem 2rem;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 900;
+  background-color: #e0dd9f;
+  border: solid 2px #898760;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.carrito .comprar_div .comprar_button:hover {
+  background-color: #898760;
+  border: solid 2px #65644a;
+}
+
+.comprar_container {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50rem;
+  width: 70rem;
+  background-color: #121212;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10rem;
+  align-items: center;
+  padding: 10rem 5rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+}
+.comprar_container .titulo {
+  font-size: 4rem;
+  font-family: "PT Serif", serif;
+  font-weight: 550;
+  text-decoration: underline solid 2px #ececec;
+  color: #ececec;
+}
+.comprar_container form {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.comprar_container .comprar_input {
+  width: 65%;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #ececec;
+  padding: 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: #222222;
+}
+.comprar_container div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comprar_container div .pagar_button {
+  padding: 1rem 2rem;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 900;
+  background-color: #e0dd9f;
+  border: solid 2px #898760;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.comprar_container div .pagar_button:hover {
+  background-color: #898760;
+  border: solid 2px #65644a;
+}
+.comprar_container div .cancelar_button {
+  padding: 1rem 2rem;
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  color: #ececec;
+  background-color: #1d1d1d;
+  border: solid 2px #000000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.comprar_container div .cancelar_button:hover {
+  background-color: #121212;
+  border: solid 2px #060606;
+}
+
+.finalmsg_container {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30rem;
+  width: 50rem;
+  background-color: #121212;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+}
+.finalmsg_container .titulo {
+  font-size: 4rem;
+  font-family: "PT Serif", serif;
+  font-weight: 550;
+  text-decoration: underline solid 2px #ececec;
+  color: #ececec;
+  text-align: center;
+}
+.finalmsg_container .finalmsg, .finalmsg_container .finalwave {
+  font-size: 2.25rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #ececec;
+  text-align: center;
 }
 
 .visible {
