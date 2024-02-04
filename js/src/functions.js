@@ -39,56 +39,66 @@ export const darVidaATienda = () => {
         })
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const funcionDeFiltros = () => {
-    
+    const productArts = [art111, art112, art211, art212, art311, art312, art413, art513, art621];
+    const listaColoresInputs = document.getElementsByName("color");
+    listaColoresInputs.forEach((input_color) => {
+        input_color.addEventListener("change", () => {
+            console.log(" ")
+            console.log(" ")
+            console.log(" ")
+            console.log("Evento CHANGE iniciado")
+            console.log(`input_color --> ${input_color}`)
+            console.log(`input_color VALUE --> ${input_color.value}`)
+            console.log(" ")
+            const listaColoresCheckboxes = Array.from(document.querySelectorAll(".checkbox"));
+            console.log(listaColoresCheckboxes)
+            console.log(" ")
+            const listaColoresCheckeadosCheckboxes = listaColoresCheckboxes.filter((color_check) => {return color_check.checked});
+            console.log(listaColoresCheckeadosCheckboxes)
+            console.log(" ")
+            const listaColoresCheckeados = listaColoresCheckeadosCheckboxes.map((color_input) => color_input.value);
+            console.log(listaColoresCheckeados)
+            console.log(" ")
+
+
+
+            if(listaColoresCheckeados.length!=0) {
+                const productosNoCumplen = productos.filter((producto) => {
+                    return !listaColoresCheckeados.some((elemento) => producto.color.includes(elemento));
+                });
+                const idProductosNoCumplen = productosNoCumplen.map((producto) => producto.id);
+                console.log(idProductosNoCumplen)
+                console.log(" ")
+                let idAEliminar;
+                for (let i=0; i<idProductosNoCumplen.length; i++) {
+                    // desaparecer los que no cumplen
+                    idAEliminar = productIds.indexOf(idProductosNoCumplen[i]);
+                    productArts[idAEliminar].classList.add("display_none");
+                }
+
+                // aparecer los que cumplen
+                const productosCumplen = productos.filter((producto) => {
+                    return listaColoresCheckeados.some((elemento) => producto.color.includes(elemento));
+                });
+                const idProductosCumplen = productosCumplen.map((producto) => producto.id);
+                console.log(idProductosCumplen)
+                console.log(" ")
+                let idAAparecer;
+                for (let i=0; i<idProductosCumplen.length; i++) {
+                    idAAparecer = productIds.indexOf(idProductosCumplen[i]);
+                    productArts[idAAparecer].classList.remove("display_none");
+                }
+            } else {
+                // todos cumplen, por lo que todos deben aparecer
+                console.log("TODOS CUMPLEN")
+                productArts.forEach((articulo) => {
+                    articulo.classList.remove("display_none");
+                })
+            }
+        });
+    })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const seleccionarProducto = () => {
     const productArts = [art111, art112, art211, art212, art311, art312, art413, art513, art621];
     let articuloChilds;

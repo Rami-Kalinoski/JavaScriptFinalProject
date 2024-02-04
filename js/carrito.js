@@ -64,6 +64,7 @@ const buyContainer = document.querySelector(".comprar_container");
 buycart.addEventListener("click", () => {
     buyContainer.classList.add("visible");
     carrito.classList.remove("visible");
+    window.scrollTo(0, 0);
 })
 
 const finalgraciasContainer = document.querySelector(".finalmsg_container");
@@ -93,7 +94,6 @@ formulario.addEventListener("submit", (event) => {
     contentHTML += `</ul>`;
 
     const cuerpoEmail = clienteHTML + contentHTML;
-    alert(cuerpoEmail)
 
     Email.send({
         SecureToken : "608bc5f7-4fd4-4731-b414-e12a7eb3e1f8",
@@ -101,9 +101,7 @@ formulario.addEventListener("submit", (event) => {
         From : "valeriamelisaromero@gmail.com",
         Subject : "Nueva Orden de Compra",
         Body : cuerpoEmail
-        }).then(
-        message => alert(message)
-    );
+        }).then();
 
     finalgraciasContainer.classList.add("visible");
     buyContainer.classList.remove("visible");

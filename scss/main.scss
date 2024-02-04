@@ -430,7 +430,8 @@ a {
 // HEADER ----------------------------------------------------------------------------------------------------------------
 header {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
     background-color: #1d1d1d;
     padding: 7.5rem 20rem;
     div {
@@ -441,9 +442,10 @@ header {
         }
     }
     nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: none;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
         input {
             font-size: 2.25rem;
             font-family: 'Roboto Slab', serif;

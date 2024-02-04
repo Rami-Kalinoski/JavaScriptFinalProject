@@ -195,6 +195,9 @@
   text-align: center;
   color: #ececec;
 }
+.tienda_main .shop_section #shop_413art, .tienda_main .shop_section #shop_513art, .tienda_main .shop_section #shop_621art {
+  display: none;
+}
 
 .display_none {
   display: none;
@@ -877,7 +880,7 @@ a {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #1d1d1d;
   padding: 7.5rem 20rem;
 }
@@ -889,7 +892,9 @@ header div .headerTitle, header div .headerLogo {
   height: 15rem;
 }
 header nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 header nav input {
   font-size: 2.25rem;
@@ -975,6 +980,12 @@ footer .footerBottom {
 footer .footerBottom p {
   font-size: 1.75rem;
   text-align: center;
+}
+
+.display_none {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
