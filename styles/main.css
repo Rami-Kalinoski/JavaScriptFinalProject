@@ -69,12 +69,14 @@
   width: 70rem;
 }
 .index_nomain article .redes_div {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 2.5rem;
 }
 .index_nomain article .redes_div div {
+  width: 100%;
   display: flex;
   justify-content: start;
   gap: 2rem;
@@ -87,6 +89,33 @@
   margin-top: 15rem;
 }
 
+@media screen and (max-width: 1400px) {
+  #proddest_section {
+    padding: 0;
+  }
+  #proddest_section article {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  #proddest_section .title {
+    text-align: center;
+  }
+  .index_nomain {
+    margin: 10rem;
+    text-align: center;
+  }
+  .index_nomain article iframe {
+    height: 20rem;
+    width: 50rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .index_nomain article iframe {
+    height: 15rem;
+    width: 30rem;
+  }
+}
 .tienda_main {
   padding: 0rem 20rem 10rem 20rem;
   display: flex;
@@ -202,6 +231,40 @@
   visibility: hidden;
 }
 
+@media screen and (max-width: 1400px) {
+  .tienda_main {
+    flex-direction: column;
+  }
+  .tienda_main .filters_section article {
+    width: 70%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    padding-right: 3.5rem;
+  }
+  .tienda_main .filters_section article .colors_div {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1311px) {
+  .tienda_main .shop_section article img {
+    height: 35rem;
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 1105px) {
+  .tienda_main .filters_section article {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 988px) {
+  .tienda_main .shop_section {
+    justify-content: center;
+  }
+}
 .producto_main {
   margin: 10rem 35rem;
 }
@@ -458,6 +521,16 @@
   text-align: justify;
 }
 
+@media screen and (max-width: 1400px) {
+  .producto_main {
+    margin: 10rem 20rem;
+  }
+}
+@media screen and (max-width: 1115px) {
+  .producto_main {
+    margin: 10rem 10rem;
+  }
+}
 html {
   margin: 0;
   padding: 0;
@@ -975,6 +1048,29 @@ footer .footerBottom {
 footer .footerBottom p {
   font-size: 1.75rem;
   text-align: center;
+}
+
+.display_none {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+  footer .footerBottom {
+    padding: 5rem 25rem;
+  }
+  .carrito {
+    width: 100%;
+  }
+  .carrito .productosSeleccionados ul li {
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  header div .headerTitle, header div .headerLogo {
+    height: 7.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

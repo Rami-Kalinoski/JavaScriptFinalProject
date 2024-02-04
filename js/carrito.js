@@ -10,16 +10,6 @@ cart.forEach((item) => {
     cargarCarrito(item);
 })
 
-// ELIMINAR DEL CARRITO --------------------------------------------------------------------
-const removecartList = Array.from(document.querySelectorAll(".removeFromCart"));
-removecartList.forEach((removecart) => {
-    removecart.addEventListener("click", () => {
-        const liPadre = removecart.parentNode.parentNode
-        removeFromCartInStorage(liPadre);
-        carrito.classList.add("visible");
-    })
-})
-
 // MOSTRAR NUMERO DE CANTIDAD DE ELEMENTOS EN CARRITO --------------------------------------
 const carritoSize = document.querySelector("#cart_lenght");
 carritoSize.innerText = cart.length;
@@ -57,6 +47,16 @@ cerrarCarrito.addEventListener("click", () => {carrito.classList.remove("visible
 // VACIAR CARRITO --------------------------------------------------------------------------
 const emptycart = document.querySelector("#emptycart_button");
 emptycart.addEventListener("click", () => {vaciarCarritoInStorage()});
+
+// ELIMINAR DEL CARRITO --------------------------------------------------------------------
+const removecartList = Array.from(document.querySelectorAll(".removeFromCart"));
+removecartList.forEach((removecart) => {
+    removecart.addEventListener("click", () => {
+        const liPadre = removecart.parentNode.parentNode
+        removeFromCartInStorage(liPadre);
+        carrito.classList.add("visible");
+    })
+})
 
 // COMPRAR CARRITO -------------------------------------------------------------------------
 const buycart = document.querySelector("#buy_button");

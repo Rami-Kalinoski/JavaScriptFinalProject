@@ -70,11 +70,13 @@
             width: 70rem;
         }
         .redes_div {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: start;
             gap: 2.5rem;
             div {
+                width: 100%;
                 display: flex;
                 justify-content: start;
                 gap: 2rem;
@@ -87,5 +89,47 @@
     }
     .lastArt {
         margin-top: 15rem;
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------- RESPONSIVE ------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------
+
+@media screen and (max-width: 1400px) {
+    #proddest_section {
+        padding: 0;
+        article {
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #proddest_section {
+        .title {
+            text-align: center;
+        }
+    }
+    .index_nomain {
+        margin: 10rem;
+        text-align: center;
+        article {
+            iframe {
+                height: 20rem;
+                width: 50rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .index_nomain {
+        article {
+            iframe {
+                height: 15rem;
+                width: 30rem;
+            }
+        }
     }
 }

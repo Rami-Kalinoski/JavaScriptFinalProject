@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <title>Phanterz | Inicio</title>
@@ -71,29 +73,29 @@
     </div>
     <div class="finalmsg_container">
         <p class="titulo">Gracias por comprar en Phanterz!</p>
-        <p class="finalmsg">La entrega de tus productos puede tardar hasta 5 días: máxima espera hasta el </p>
+        <p class="finalmsg">La entrega de tus productos puede tardar hasta 5 días.</p>
         <p class="finalwave">¡Que tengas un excelente día!</p>
     </div>
     <!-- MAIN ------------------------------------------------------------------------- -->
     <main class="index_main">
         <a href="./pages/tienda.html"><h1 class="title">Productos Destacados</h1></a>
-        <section>
-            <article id="index111art">
+        <section id="proddest_section" class="row">
+            <article class="col-xl-6 col-xxl-3" id="index111art">
                 <a href="./pages/tienda.html"><img src="./assets/img/products/111/modelfront.jpg" alt="Modelo usando la remera oversize Phanterz Ind"></a>
                 <a href="./pages/tienda.html"><p class="nombre">Remera Oversize<br>"Phanterz Ind"</p></a>
                 <a href="./pages/tienda.html"><p class="precio">$7.000</p></a>
             </article>
-            <article id="index212art">
+            <article class="col-xl-6 col-xxl-3" id="index212art">
                 <a href="./pages/tienda.html"><img src="./assets/img/products/212/modelfront.jpg" alt="Modelo usando la remera sin mangas Snake Venom"></a>
                 <a href="./pages/tienda.html"><p class="nombre">Remera sin Mangas<br>“Snake Venom”</p></a>
                 <a href="./pages/tienda.html"><p class="precio">$7.500</p></a>
             </article>
-            <article id="index312art">
+            <article class="col-xl-6 col-xxl-3" id="index312art">
                 <a href="./pages/tienda.html"><img src="./assets/img/products/312/modelfront.jpg" alt="Modelo usando la remera sin mangas Phanterz Scar"></a>
                 <a href="./pages/tienda.html"><p class="nombre">Remera sin Mangas<br>“Phanterz Scar”</p></a>
                 <a href="./pages/tienda.html"><p class="precio">$8.000</p></a>
             </article>
-            <article id="index413art">
+            <article class="col-xl-6 col-xxl-3" id="index413art">
                 <a href="./pages/tienda.html"><img src="./assets/img/products/413/modelfront.jpg" alt="Modelo usando la remera de compresión The Black Phanter"></a>
                 <a href="./pages/tienda.html"><p class="nombre">Remera de Compresión<br>“The Black Phanter”</p></a>
                 <a href="./pages/tienda.html"><p class="precio">$12.000</p></a>
@@ -124,8 +126,8 @@
     </section>
     <!-- FOOTER-------------------------------------------------------------------------------------------------------------------- -->
     <footer>
-        <section class="footerTop">
-            <article>
+        <section class="footerTop row">
+            <article class="col-sm-12">
                 <div class="footerMediosDiv">
                     <h3>MEDIOS DE PAGO</h3>
                     <div>
@@ -143,7 +145,7 @@
                     </div>
                 </div>
             </article>
-            <article>
+            <article class="col-sm-12">
                 <div class="footerContactoDiv">
                     <h3>CONTACTO</h3>
                     <p>phanterz.ar@gmail.com</p>
@@ -160,6 +162,8 @@
     </footer>
     <!-- EMAIL API -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- JAVASCRIPT -->
     <script src="./js/index.js" type="module"></script>
     <script src="./js/carrito.js" type="module"></script>

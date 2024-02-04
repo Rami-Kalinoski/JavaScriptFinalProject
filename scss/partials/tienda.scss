@@ -114,3 +114,60 @@
     opacity: 0;
     visibility: hidden;
 }
+
+
+// -------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------- RESPONSIVE ------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------
+
+@media screen and (max-width: 1400px) {
+    .tienda_main {
+        flex-direction: column;
+        .filters_section {
+            article {
+                width: 70%;
+                height: 10rem;
+                align-items: center;
+                justify-content: center;
+                padding-right: 3.5rem;
+                .colors_div {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1311px) {
+    .tienda_main {
+        .shop_section {
+            article {
+                img {
+                    height: 35rem;
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    .tienda_main {
+        .filters_section {
+            article {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 988px) {
+    .tienda_main {
+        .shop_section {
+            justify-content: center;
+        }
+    }
+}

@@ -534,3 +534,41 @@ footer {
         }
     }
 }
+
+.display_none {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------- RESPONSIVE ------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------
+
+@media screen and (max-width: 1400px) {
+    footer {
+        .footerBottom {
+            padding: 5rem 25rem;
+        }
+    }
+    .carrito {
+        width: 100%;
+        .productosSeleccionados {
+            ul {
+                li {
+                    height: 30rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        div {
+            .headerTitle, .headerLogo {
+                height: 7.5rem;
+            }
+        }
+    }
+}

@@ -106,6 +106,8 @@ export const seleccionarProducto = () => {
         articuloChilds = Array.from(articulo.children);
         articuloChilds.forEach((hijo) => {
             hijo.addEventListener("click", () => {
+                // ID
+                localStorage.setItem("productoSelectedIndex", index);
                 // NOMBRE
                 localStorage.setItem("productoNameHTML", `${productos[index].garment} ${productos[index].type}<br>"${productos[index].model}"`);
                 localStorage.setItem("productoPriceHTML", `$${productos[index].price}`);
@@ -160,6 +162,33 @@ export const cargarInfoProducto = () => {
         </div>
         <img src="${productoImgSrc[1]}" alt="${productoImgAlt[1]}" class="main_img" id="productMain_img">
     `
+
+    // ELIMINAR COLORES INEXISTENTES PARA EL PRODUCTO
+    const index = localStorage.getItem("productoSelectedIndex");
+    if(!productos[index].color.includes("negro")) {
+        const colorNegroInput = document.querySelector("#negro");
+        const colorNegroLabel = document.querySelector("#labelForNegro");
+        colorNegroInput.classList.add("display_none");
+        colorNegroLabel.classList.add("display_none");
+    }
+    if(!productos[index].color.includes("gris")) {
+        const colorGrisInput = document.querySelector("#gris");
+        const colorGrisLabel = document.querySelector("#labelForGris");
+        colorGrisInput.classList.add("display_none");
+        colorGrisLabel.classList.add("display_none");
+    }
+    if(!productos[index].color.includes("blanco")) {
+        const colorBlancoInput = document.querySelector("#blanco");
+        const colorBlancoLabel = document.querySelector("#labelForBlanco");
+        colorBlancoInput.classList.add("display_none");
+        colorBlancoLabel.classList.add("display_none");
+    }
+    if(!productos[index].color.includes("azul")) {
+        const colorAzulInput = document.querySelector("#azul");
+        const colorAzulLabel = document.querySelector("#labelForAzul");
+        colorAzulInput.classList.add("display_none");
+        colorAzulLabel.classList.add("display_none");
+    }
 }
 
 let cant = 1;
